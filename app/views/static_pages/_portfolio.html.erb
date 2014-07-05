@@ -1,0 +1,16 @@
+<!-- Third (Works) section -->
+<section class="section" id="themes">
+  <div class="container">
+  
+    <h2 class="text-center title">More Themes</h2>
+    <p class="lead text-center">
+      Huge thank you to all people who publish<br>
+      their photos at <a href="http://unsplash.com">Unsplash</a>, thank you guys!
+    </p>
+
+    <div class="row">
+      <%= render partial: 'portfolio_item', collection: @portfolio_items, as: :item %>
+    </div>
+
+  </div>
+</section>
