@@ -1,6 +1,12 @@
 PersonalPortfolio::Application.routes.draw do
 
   root 'static_pages#home'
+  devise_for :users, :path => '', :path_names => { :sign_in => "dashboard/login", :sign_out => "dashboard/logout"}
+
+  namespace :dashboard do
+    get 'home' => 'dashboard#home'
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
